@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Jurassic Park</title>
+    <meta name="description" content="Jurassic Park - Onde o passado ainda vive.">
+    
+    <link rel="shortcut icon" href="Imagem/logopark.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        
+        <div class="buscar">
+            <form action="#" method="get" onsubmit="return false;">
+                <input type="text" id="campo-busca" name="q" placeholder="Pesquisar...">
+                <button type="button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <nav class="navegacao">
+            <button class="menu-toggle" id="mobile-menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+
+            <ul class="menu-lista" id="lista-links">
+                <li><a href="#atracoes"> * Sobre</a></li>
+                <li><a href="#valores"> 2 Valores</a></li>
+                <li><a href="#contato"> 3 Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="principal">
+            <div class="destaque">
+                <img class="destaque-img" src="Imagem/destaque.png" alt="Destaque Jurassic Park">
+            </div>
+        </section>
+
+        <section id="atracoes" style="padding: 20px;">
+            <h1>Sobre</h1>
+            
+            <div class="carousel-container">
+                <button class="nav-btn" id="btn-prev" onclick="moveCarousel(-1)">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="track">
+                        <div class="carousel-item">
+                            <div class="card"><img src="Imagem/image (1).png" alt="Dinossauro 1"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card"><img src="Imagem/image (2).png" alt="Dinossauro 2"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card"><img src="Imagem/image (3).png" alt="Dinossauro 3"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card"><img src="Imagem/image4.png" alt="Dinossauro 4"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card"><img src="Imagem/image5.png" alt="Dinossauro 5"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn" id="btn-next" onclick="moveCarousel(1)">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <div class="container-valores-branco">
+            <section id="valores" class="pricing-section">
+                <div class="header">
+                    <span class="badge">Valores</span>
+                    <h1>Aqui o valor e extinto.</h1>
+                    <p class="subtitle">Onde o passado ainda vive. Escolha sua jornada pela Ilha Nublar.</p>
+                    
+                    <div class="toggle-container">
+                        <button class="toggle-btn active" onclick="setCycle('monthly')" id="btn-monthly">Ingressos</button>
+                        <button class="toggle-btn" onclick="setCycle('annual')" id="btn-annual">Planos</button>
+                    </div>
+                </div>
+
+                <div class="pricing-grid">
+                    
+                    <div class="card">
+                        <span class="plan-name">Gênese</span>
+                        <p class="plan-desc">Acesso básico ao Centro de Visitantes e observação de herbívoros.</p>
+                        <div class="price-area">
+                            R$<span class="amount" data-monthly="49" data-annual="69">49</span>
+                            <span class="price-period">/ingresso</span>
+                        </div>
+                        <a href="#" class="cta-button">Compre já</a>
+                        <ul class="features-list">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tour pelo Vale dos Galimimos</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Entrada no Centro de Visitantes</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Kit de boas-vindas básico</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <span class="plan-name">Mesozóico</span>
+                        <p class="plan-desc">Expedição completa com direito a tour noturno e laboratórios.</p>
+                        <div class="price-area">
+                            R$<span class="amount" data-monthly="199" data-annual="299">199</span>
+                            <span class="price-period">/ingresso</span>
+                        </div>
+                        <a href="#" class="cta-button">Compre já</a>
+                        <ul class="features-list">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tudo do plano Gênese</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Safári nos cercados de carnívoros</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast-pass em todas as atrações</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <span class="plan-name">Apex</span>
+                        <p class="plan-desc">O topo da cadeia alimentar. Experiência VIP e segurança máxima.</p>
+                        <div class="price-area">
+                            R$<span class="amount" data-monthly="1666" data-annual="2499">1666</span>
+                            <span class="price-period">/ingresso</span>
+                        </div>
+                        <a href="#" class="cta-button">Domine a Ilha</a>
+                        <ul class="features-list">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Experiência exclusiva com o T-Rex</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hospedagem no Resort 5 estrelas</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Evacuação prioritária via helicóptero</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <br><br><br><br>
+
+    <footer class="rodape">
+        <div class="rodape-content">
+            <ul class="sobre_nos">
+                <strong>InGen Corp</strong>
+                <a href="#">História da Empresa</a><br>
+                <a href="#">John Hammond: O Legado</a><br>
+                <a href="#">Relatórios Éticos</a><br>
+                <a href="#">Carreiras em Bioengenharia</a><br>
+            </ul>
+            
+            <ul class="paginas">
+                <strong>Horários de Funcionamento</strong>
+                <a href="#">Segunda a Sábado</a><br>
+                <a href="#">Abertura dos portões: 7h</a><br>
+                <a href="#">Fechamento: 22h</a><br>
+            </ul>
+            
+            <ul class="contato">
+                <strong>Emergência Local</strong>
+                <li>VHF: Canal Alpha 1</li>
+                <li>Tel: +1 (555) ISLA-NUB</li>
+                <li>E-mail: secure@ingen.com</li>
+                <li>Coordenadas: 9.5°N 86.5°W</li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="brand-footer">
+        <h1 class="jurassic-giant">JURASSIC PARK</h1>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

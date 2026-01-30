@@ -1,2 +1,2 @@
-# Jurassic-Park2
-Parque temático
+# jurassic_park
+ Parque temático de Jurassic Park
